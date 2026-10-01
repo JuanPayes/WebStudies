@@ -1,0 +1,44 @@
+:root{
+  --font-color:  #fcfcfb;
+  --background-color:  #000000;
+  --margin-color:  #3a3a39 ;
+  --table-font-color:  #3a3a39 ;
+  background-color: var(--background-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  align-content: center;
+} 
+.game-info{
+justify-content: center;
+}
+.game-board{
+  align-content: center;
+}
+.board-row{
+  display: flex;
+  justify-content: center;
+}
+
+.status{
+  color: var(--font-color);
+  text-align: center;
+  margin: 1em;
+  font-weight: 500;
+  font-size: 2em;
+}
+
+.square{
+background-color: var(--background-color);
+border:var(--margin-color) 0.1em;
+border-style: dashed;
+color: var(--font-color);
+height: 4em;
+width: 4em;
+padding: 0.3em;
+font-size: 3.5em;
+font-weight: 600;
+text-align: center;
+cursor: pointer;
+box-sizing: border-box;
+margin: 0;
+}
+

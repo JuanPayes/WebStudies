@@ -1,0 +1,25 @@
+doctype html 
+html 
+    head 
+        title Poke API
+    body 
+        h1 POKE API
+        h2 Gotta cath 'em all!
+        div.crud
+            form(action="/pokemon" method="get") 
+                input(type="text" name="name" placeholder="Pikachu" required)
+                button(type="submit") Search
+
+    if pokemonList && pokemonList.length > 0
+        each pokemon in pokemonList 
+            div.pokemon-entry
+                h2= pokemon.name
+                img(src=pokemon.sprites.front_default, alt=pokemon.name)
+                p N dex number: #{pokemon.id}
+                p Type: #{pokemon.types.map(type => type.type.name).join(' ')}
+
+                form(action="/delete" method="get")
+                    input(type="hidden" name="name" value=pokemon.name) 
+                    button(action="delete" ) Delete
+    else if error
+        p= error
